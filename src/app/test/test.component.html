@@ -1,0 +1,167 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="border: none;">
+                <div class="card-body">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center;"><h3 style="color: darkblue;">Welcome</h3></td>
+                            
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="border: none;">
+                <div class="card-body">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center;"><h2 style="color: darkblue;">Online Test Application</h2></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="border: none;">
+                <div class="card-body">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center;">
+                                <h5 style="color: darkblue;">{{name}}</h5>
+                                <br/>
+                                <h5 style="color: darkblue;">{{email}}</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-dark" width="100%">
+                        <tr>
+                            <td style="text-align: center;"><h3>{{questions[i].id}}&nbsp;.&nbsp;{{questions[i].ques}}</h3> </td>
+                           
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col-md-12">
+            <div class="card" style="border: none;">
+                <div class="card-body">
+                    <table width="100%">
+                        
+                        
+                       
+                        <tr>
+                            <td style="width: 100%;">
+                               
+                                
+                                <input type="radio" class="btn-check" name="opt" value="a" id="success-outlined1" autocomplete="off" [(ngModel)]="option">
+                                <label class="btn btn-outline-success" for="success-outlined1"><h3>{{questions[i].option1}}</h3></label>
+
+                            </td>
+                        </tr>
+                        <tr>&nbsp;</tr>
+                        <tr>
+                            <td style="width: 100%;">
+                                <input type="radio" class="btn-check" name="opt" value="b" id="success-outlined2" autocomplete="off" [(ngModel)]="option">
+                                <label class="btn btn-outline-success" for="success-outlined2"><h3>{{questions[i].option2}}</h3></label>
+                            </td>    
+                                
+                        </tr>
+                        <tr>&nbsp;</tr>
+                        <tr>
+                            <td style="width: 100%;">
+                                <input type="radio" class="btn-check" name="opt" value="c" id="success-outlined3" autocomplete="off" [(ngModel)]="option">
+                                <label class="btn btn-outline-success" for="success-outlined3"><h3>{{questions[i].option3}}</h3></label>
+                            </td>
+                             
+                        </tr>
+                        <tr>&nbsp;</tr>
+                        <tr>
+                            <td style="width: 100%;">
+                                <input type="radio" class="btn-check" name="opt" value="d" id="success-outlined4" autocomplete="off" [(ngModel)]="option">
+                                <label class="btn btn-outline-success" for="success-outlined4"><h3>{{questions[i].option4}}</h3></label>
+                            </td>   
+                            <td> <div style="vertical-align: bottom;" *ngIf="nextDisabled">This is the final question.Submit the test to see the result</div></td> 
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+            
+        
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="card" style="border: none;">
+                <div class="card-body">
+                    <table width="100%">
+                        <tr>&nbsp;&nbsp;&nbsp; </tr>
+                        
+                      
+                        <tr>
+                            <td ><input type="button" class="btn btn-info" value="Clear Attempt" (click)="clearOption()"/> 
+                               </td>
+                               <td>
+                                <input type="button" class="btn btn-primary" value="Previous" (click)="previousQuestion()" [disabled]="preDisabled" /> 
+                              </td>
+                           
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8"></div>
+        <div class="col-md-2">
+            <div class="card" style="border: none;">
+                <div class="card-body">
+                    <table width="100%">
+                        <tr>&nbsp;&nbsp;&nbsp; </tr>
+                        <tr>&nbsp;&nbsp;&nbsp; </tr>
+                        <tr>
+                           
+                        </tr>
+                       
+                        <tr>
+                            <td ><input type="button" class="btn btn-primary" value="Save and Next" (click)="nextQuestion()" [disabled]="nextDisabled"/> 
+                            </td> 
+                                <td> 
+                                <input type="button" class="btn btn-danger" value="Submit" (click)="saveAttempt()"/> 
+                                 </td>
+                           
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+            
+
+
+
+
+
+       
+        
+    
+       
+        
+
+
